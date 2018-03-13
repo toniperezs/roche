@@ -1,0 +1,9 @@
+package com.roche.services.interfaces;
+
+public interface TestServiceInterface {
+	
+	private TestServiceInterface instance;
+	
+	public static TestServiceInterface getInstance();
+
+}

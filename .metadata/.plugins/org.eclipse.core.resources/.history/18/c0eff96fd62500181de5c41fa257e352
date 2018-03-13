@@ -1,0 +1,43 @@
+package com.roche.client;
+
+import java.util.ArrayList;
+
+import main.com.roche.bos.impls.BiochemistryTestBO;
+import main.com.roche.bos.impls.ImmunologyTestBO;
+import main.com.roche.bos.impls.OrderBO;
+import main.com.roche.bos.impls.PatientBO;
+import main.com.roche.bos.impls.SampleBO;
+import main.com.roche.bos.impls.TestBO;
+
+import com.roche.constants.Constants;
+
+public class Client {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+	}
+
+	private TestBO createTest(String testId, int propTestBioA, String propTestBioB,
+			boolean propTestImmuA, String propTestImmuB){
+		TestBO test = null;
+		if (testId.equals(Constants.TEST_BIO)){
+			test = new BiochemistryTestBO(false, propTestBioA, propTestBioB);
+		}
+		else if (testId.equals(Constants.TEST_IMMU)){
+			test = new ImmunologyTestBO(false, propTestImmuA, propTestImmuB);
+		}
+		
+		return test;
+	}
+	
+	private OrderBO createOrder(){
+		OrderBO order = new OrderBO();
+		
+	}
+}

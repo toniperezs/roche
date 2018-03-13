@@ -1,0 +1,25 @@
+package com.roche.services.provider;
+
+import com.roche.bos.impls.TestBO;
+import com.roche.services.impls.BaseTestServiceImpl;
+
+
+public class ServiceLocator {
+
+	private static ServiceLocator instance;
+
+	private ServiceLocator() {
+		super();
+	}
+	
+	public static ServiceLocator getInstance() {
+		if (instance == null)
+			instance = new ServiceLocator(); 
+		
+		return instance;
+	}
+	
+	public BaseTestServiceImpl getService(TestBO test){
+		return ServiceContainer.getInstance().getService(test);
+	}
+}

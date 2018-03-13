@@ -1,0 +1,9 @@
+1520765691513	Rename package 'services'
+1520765703265	Rename package 'com.roche.bo'
+1520768292263	Rename compilation unit 'SampleBOInterface.java'
+1520768300758	Move compilation unit
+1520769094760	Rename type 'TestBOInterface'
+1520769108941	Move compilation unit
+1520769926393	Delete element
+1520769939613	Delete element
+1520772700897	Rename package 'com.roche.services.locator'

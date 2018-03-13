@@ -1,0 +1,34 @@
+package com.roche.services.impls;
+
+import java.util.ArrayList;
+
+import main.com.roche.bos.impls.SampleBO;
+import main.com.roche.bos.impls.TestBO;
+
+
+public class ImmunologyTestServiceImpl extends BaseTestServiceImpl{
+
+private static ImmunologyTestServiceImpl instance;
+	
+	private ImmunologyTestServiceImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	public static BaseTestServiceImpl getInstance() {
+		if (instance == null)
+			instance = new ImmunologyTestServiceImpl(); 
+		
+		return instance;
+	}
+
+	@Override
+	public void doTest(TestBO test, ArrayList<SampleBO> samples){
+		
+		//Lógica de negocio de un test Bioquímico, en base a las muestras que nos llegan en la variable samples
+		//El resultado se seteará en test
+		test.setPassed(false);
+	}
+}

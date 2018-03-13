@@ -1,0 +1,11 @@
+package com.roche.services.impls;
+
+import java.util.ArrayList;
+
+public class ImmunologyTestServiceImpl extends BaseTestServiceImpl{
+
+	@Override
+	public void doTest(TestBOInterface test, ArrayList<SampleBOInterface> samples){
+		
+	}
+}

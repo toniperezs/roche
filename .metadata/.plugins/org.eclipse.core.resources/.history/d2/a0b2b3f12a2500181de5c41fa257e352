@@ -1,0 +1,26 @@
+package com.roche.services.locator;
+
+import com.roche.bos.impls.TestBO;
+import com.roche.services.impls.BaseTestServiceImpl;
+import com.roche.services.impls.BiochemistryTestServiceImpl;
+
+public class ServiceLocator {
+
+	private ServiceLocator instance;
+
+	private ServiceLocator() {
+		super();
+	}
+	
+	public ServiceLocator getInstance() {
+		if (instance == null)
+			instance = new ServiceLocator(); 
+		
+		return instance;
+	}
+	
+	public BaseTestServiceImpl getService(TestBO test){
+		
+		return new BaseTestServiceImpl();
+	}
+}

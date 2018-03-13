@@ -1,0 +1,13 @@
+package test.main.com.roche.services.impls;
+
+public class ImmunologyTestServiceImplTesting {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

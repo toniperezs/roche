@@ -1,0 +1,8 @@
+package com.roche.services.interfaces;
+
+public interface TestServiceInterface {
+	
+	public void doTest(TestBOInterface test, ArrayList<SampleBOInterface> samples);
+		
+
+}

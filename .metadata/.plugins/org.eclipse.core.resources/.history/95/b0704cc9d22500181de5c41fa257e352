@@ -1,0 +1,17 @@
+package com.roche.bos.impls;
+
+public class BloodSampleBO extends SampleBO{
+	
+	private int propSampleBloodA;
+
+	public int getPropSampleBloodA() {
+		return propSampleBloodA;
+	}
+
+	public void setPropSampleBloodA(int propSampleBloodA) {
+		this.propSampleBloodA = propSampleBloodA;
+	}
+	
+	
+
+}

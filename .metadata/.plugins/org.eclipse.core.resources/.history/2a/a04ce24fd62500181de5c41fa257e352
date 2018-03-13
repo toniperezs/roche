@@ -1,0 +1,36 @@
+package com.roche.integration.impls;
+
+import com.roche.bos.impls.OrderBO;
+import com.roche.bos.impls.TestBO;
+import com.roche.integration.interfaces.FacadeInterface;
+import com.roche.services.impls.BaseTestServiceImpl;
+import com.roche.services.provider.ServiceLocator;
+
+
+
+/**
+ * @author antonio
+ * @version 1.0
+ * @created 12-mar-2018 9:30:51
+ */
+public class Facade implements FacadeInterface {
+
+	public Facade(){
+
+	}
+
+	
+	/**
+	 * 
+	 * @param orderBO
+	 */
+	public void analizeOrder(OrderBO orderBO){
+		
+		//1. Iterar tests a realizar contra el paciente
+		for(TestBO test : orderBO.getTests()){
+			BaseTestServiceImpl service = ServiceLocator.getInstance().getService(test);
+			service.doTest(test, orderBO.getSamples());
+		}
+
+	}
+}//end Facade

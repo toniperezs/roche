@@ -1,0 +1,6 @@
+package com.roche.bos.interfaces;
+
+public interface TestBO {
+
+	public boolean passed();
+}

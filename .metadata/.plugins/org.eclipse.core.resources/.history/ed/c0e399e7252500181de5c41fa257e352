@@ -1,0 +1,26 @@
+package com.roche.services.impls;
+
+
+import java.util.ArrayList;
+
+import com.roche.bos.impls.SampleBO;
+import com.roche.bos.impls.TestBO;
+
+
+public abstract class BaseTestServiceImpl {
+	
+	private BaseTestServiceImpl instance;
+
+	private BaseTestServiceImpl() {
+		super();
+	}
+	
+	public abstract BaseTestServiceImpl getInstance();
+	public abstract void doTest(TestBO test, ArrayList<SampleBO> samples);
+		
+		
+	
+	
+	
+
+}

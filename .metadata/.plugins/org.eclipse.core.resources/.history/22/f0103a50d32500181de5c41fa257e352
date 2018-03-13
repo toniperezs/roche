@@ -1,0 +1,29 @@
+package com.roche.bos.impls;
+
+public class ImmunologyTestBO extends TestBO{
+
+	private boolean propTestImmuA;
+	private String propTestImmuB;
+	
+	public ImmunologyTestBO(boolean passed, String identifier,
+			boolean propTestImmuA, String propTestImmuB) {
+		super(passed, identifier);
+		this.propTestImmuA = propTestImmuA;
+		this.propTestImmuB = propTestImmuB;
+	}
+	
+	public boolean isPropTestImmuA() {
+		return propTestImmuA;
+	}
+	public void setPropTestImmuA(boolean propTestImmuA) {
+		this.propTestImmuA = propTestImmuA;
+	}
+	public String getPropTestImmuB() {
+		return propTestImmuB;
+	}
+	public void setPropTestImmuB(String propTestImmuB) {
+		this.propTestImmuB = propTestImmuB;
+	}
+	
+	
+}

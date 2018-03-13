@@ -1,0 +1,5 @@
+package com.roche.integration.impls;
+
+public class Facade {
+
+}

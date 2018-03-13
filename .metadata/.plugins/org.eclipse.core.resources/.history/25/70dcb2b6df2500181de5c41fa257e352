@@ -1,0 +1,57 @@
+package test.main.com.roche.services.impls;
+
+import main.com.roche.bos.impls.BiochemistryTestBO;
+import main.com.roche.bos.impls.BloodSampleBO;
+import main.com.roche.bos.impls.ImmunologyTestBO;
+import main.com.roche.bos.impls.OrderBO;
+import main.com.roche.bos.impls.SampleBO;
+import main.com.roche.bos.impls.TestBO;
+import main.com.roche.bos.impls.UrineSampleBO;
+import main.com.roche.constants.Constants;
+import main.com.roche.services.impls.BiochemistryTestServiceImpl;
+import main.com.roche.services.provider.ServiceLocator;
+
+import org.junit.*;
+
+public class BiochemistryTestServiceImplTesting {
+
+	private BiochemistryTestServiceImpl biochemistryTestService;
+	private TestBO testBO;
+	private BloodSampleBO sampleBlood;
+	private UrineSampleBO urineSample;
+	
+	@Before
+	public void initialize(){
+		
+		
+		biochemistryTestService = ServiceLocator.getInstance().getService(test);
+	}
+	
+	@Test
+	public void propAOfBloodSampleMinorThan100ShouldReturnTrue() {
+		BiochemistryTestServiceImplTesting service = ServiceLocator.getInstance().getService(test);
+    }
+	
+	@Test
+	public void propAOfBloodSampleEqualsTo100ShouldReturnTrue() {
+        
+    }
+	
+	@Test
+	public void propAOfBloodSampleBiggerThan100ShouldReturnFalse() {
+        
+    }
+
+	private TestBO createTest(String testId, int propTestBioA, String propTestBioB,
+			boolean propTestImmuA, String propTestImmuB){
+		TestBO test = null;
+		if (testId.equals(Constants.TEST_BIO)){
+			test = new BiochemistryTestBO(false, propTestBioA, propTestBioB);
+		}
+		else if (testId.equals(Constants.TEST_IMMU)){
+			test = new ImmunologyTestBO(false, propTestImmuA, propTestImmuB);
+		}
+		
+		return test;
+	}
+}

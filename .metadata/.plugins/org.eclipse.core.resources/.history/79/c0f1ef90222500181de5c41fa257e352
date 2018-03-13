@@ -1,0 +1,5 @@
+package com.roche.bos.impls;
+
+public class BiochemistryTestBO {
+
+}

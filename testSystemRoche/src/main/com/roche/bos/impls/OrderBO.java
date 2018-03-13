@@ -1,0 +1,47 @@
+package main.com.roche.bos.impls;
+
+import java.util.ArrayList;
+
+public class OrderBO {
+
+	private PatientBO patient;
+	private ArrayList<SampleBO> samples;
+	private ArrayList<TestBO> tests;
+	
+	
+	
+	public OrderBO() {
+		super();
+	}
+	
+	public OrderBO(PatientBO patient, ArrayList<SampleBO> samples,
+			ArrayList<TestBO> tests) {
+		super();
+		this.patient = patient;
+		this.samples = samples;
+		this.tests = tests;
+	}
+
+
+
+	public PatientBO getPatient() {
+		return patient;
+	}
+	public void setPatient(PatientBO patient) {
+		this.patient = patient;
+	}
+	public ArrayList<SampleBO> getSamples() {
+		return samples;
+	}
+	public void setSamples(ArrayList<SampleBO> samples) {
+		this.samples = samples;
+	}
+	public ArrayList<TestBO> getTests() {
+		return tests;
+	}
+	public void setTests(ArrayList<TestBO> tests) {
+		this.tests = tests;
+	}
+	
+	
+}

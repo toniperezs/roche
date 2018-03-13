@@ -1,0 +1,32 @@
+package com.roche.services.impls;
+
+import java.util.ArrayList;
+
+import com.roche.bos.impls.SampleBO;
+import com.roche.bos.impls.TestBO;
+
+
+
+public class BiochemistryTestServiceImpl extends BaseTestServiceImpl{
+
+	private static BiochemistryTestServiceImpl instance;
+	
+	private BiochemistryTestServiceImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	public BaseTestServiceImpl getInstance() {
+		if (instance == null)
+			instance = new BiochemistryTestServiceImpl(); 
+		
+		return instance;
+	}
+
+	@Override
+	public void doTest(TestBO test, ArrayList<SampleBO> samples){
+		
+	}
+}

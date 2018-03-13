@@ -1,0 +1,23 @@
+package com.roche.bos.impls;
+
+public class BiochemistryTestBO extends TestBO{
+
+	
+	private int propTestBioA;
+	private String propTestBioB;
+	
+	public int getPropTestBioA() {
+		return propTestBioA;
+	}
+	public void setPropTestBioA(int propTestBioA) {
+		this.propTestBioA = propTestBioA;
+	}
+	public String getPropTestBioB() {
+		return propTestBioB;
+	}
+	public void setPropTestBioB(String propTestBioB) {
+		this.propTestBioB = propTestBioB;
+	}
+	
+	
+}

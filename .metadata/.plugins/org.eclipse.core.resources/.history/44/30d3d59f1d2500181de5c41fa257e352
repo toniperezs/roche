@@ -1,0 +1,26 @@
+package com.roche.services.impls;
+
+import com.roche.services.interfaces.ArrayList;
+import com.roche.services.interfaces.SampleBOInterface;
+import com.roche.services.interfaces.TestBOInterface;
+import com.roche.services.interfaces.TestServiceInterface;
+
+public  class BaseTestServiceImpl implements TestServiceInterface{
+	
+	private BaseTestServiceImpl instance;
+
+	private BaseTestServiceImpl() {
+		super();
+	}
+	
+	public BaseTestServiceImpl getInstance(){
+		if (instance == null)
+			return new BaseTestServiceImpl();
+		
+	}
+	
+	public void doTest(TestBOInterface test, ArrayList<SampleBOInterface> samples){
+		
+	}
+
+}

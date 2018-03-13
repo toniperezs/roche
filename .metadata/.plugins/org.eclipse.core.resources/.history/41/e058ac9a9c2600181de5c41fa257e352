@@ -1,0 +1,73 @@
+package main.com.roche.services.provider;
+
+import java.util.HashMap;
+
+import main.com.roche.bos.impls.TestBO;
+import main.com.roche.constants.Constants;
+import main.com.roche.services.impls.BaseTestServiceImpl;
+import main.com.roche.services.impls.BiochemistryTestServiceImpl;
+import main.com.roche.services.impls.ImmunologyTestServiceImpl;
+
+
+public class ServiceContainer {
+
+	private final static String SERVICENAME_SUFFIX = "TestServiceImpl";
+	private HashMap<String, BaseTestServiceImpl> services;
+	private static ServiceContainer instance;
+	
+	private ServiceContainer(){
+		super();
+		services = new HashMap();
+		
+		//HARDCODED. Poner los servicios. Lo ideal es definirlos en un fichero externo, para no tener que modificar esta clase por cada nuevo servicio creado
+		//Identificador-class
+		services.put(Constants.TEST_BIO, BiochemistryTestServiceImpl.getInstance());
+		services.put(Constants.TEST_IMMU, ImmunologyTestServiceImpl.getInstance());
+		
+	}
+	
+	public static ServiceContainer getInstance() {
+		if (instance == null)
+			instance = new ServiceContainer(); 
+		
+		return instance;
+	}
+	
+	/**
+	 * 
+	 * @param testBO
+	 */
+	public BaseTestServiceImpl getService(String identifier){
+		
+		BaseTestServiceImpl service = services.get(identifier);
+		if (service == null){
+			System.out.println("No existe el servicio con nombre:"+identifier);
+		}
+		
+		return service;
+	}
+
+//	public void addService(TestBO testBO){
+//		//Obtener class servicio a partir del nombre del test: usaremos reflection
+//		try{
+//			Class serviceClass = Class.forName(getFullServiceName(testBO.getIdentifier()));
+//			Method method = serviceClass.getMethod("getInstance", new Class[0]);
+//			Object o = method.invoke(cls, new Object[0]);
+//			
+//			
+//			services.put(testBO.getIdentifier(), (BaseTestServiceImpl) serviceClass  );
+//		}catch (ClassNotFoundException ex){
+//			System.out.println("El test solicitado no existe en el sistema");
+//		}catch (ClassCastException ex2){
+//			System.out.println("La clase definida por el identificador no hereda a la clase Base");
+//			
+//		}
+//		
+//	}
+//	
+//	private void addService(BaseTestServiceImpl testService){
+//
+//	}
+	
+
+}

@@ -1,0 +1,25 @@
+package com.roche.services.provider;
+
+import java.util.HashMap;
+
+import com.roche.services.impls.BaseTestServiceImpl;
+
+public class ServiceContainer {
+
+	private HashMap<String, BaseTestServiceImpl> services;
+	private ServiceContainer instance;
+	
+	private ServiceContainer(){
+		super();
+		services = new HashMap();
+	}
+	
+	public ServiceContainer getInstance() {
+		if (instance == null)
+			instance = new ServiceContainer(); 
+		
+		return instance;
+	}
+	
+	
+}

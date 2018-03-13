@@ -1,0 +1,10 @@
+package com.roche.bos.impls;
+
+import java.util.ArrayList;
+
+public class OrderBO {
+
+	private PatientBO patient;
+	private ArrayList<OrderBO> orders;
+	private ArrayList<TestBO> tests;
+}

@@ -1,0 +1,5 @@
+package com.roche.services.impls;
+
+public class BiochemistryTestServiceImpl {
+
+}
