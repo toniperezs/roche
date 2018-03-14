@@ -2,10 +2,9 @@ package main.com.roche.integration.impls;
 
 import main.com.roche.bos.impls.OrderBO;
 import main.com.roche.bos.impls.TestBO;
-import main.com.roche.services.impls.BaseTestServiceImpl;
-import main.com.roche.services.impls.ImmunologyTestServiceImpl;
-import main.com.roche.services.provider.ServiceLocator;
 import main.com.roche.integration.interfaces.FacadeInterface;
+import main.com.roche.services.impls.BaseTestServiceImpl;
+import main.com.roche.services.provider.ServiceLocator;
 
 
 
@@ -32,6 +31,7 @@ public class Facade implements FacadeInterface {
 	 * 
 	 * @param orderBO
 	 */
+	@Override
 	public void analizeOrder(OrderBO orderBO){
 		
 		//1. Iterar tests a realizar contra el paciente

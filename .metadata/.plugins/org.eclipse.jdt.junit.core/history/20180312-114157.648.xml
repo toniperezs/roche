@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BiochemistryTestServiceImplTesting" project="testSystemRoche" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="test.main.com.roche.services.impls.BiochemistryTestServiceImplTesting" time="0.001">
-    <testcase name="propAOfBloodSampleMinorThan100ShouldReturnTrue" classname="test.main.com.roche.services.impls.BiochemistryTestServiceImplTesting" time="0.0"/>
-    <testcase name="propAOfBloodSampleBiggerThan100ShouldReturnFalse" classname="test.main.com.roche.services.impls.BiochemistryTestServiceImplTesting" time="0.0"/>
-    <testcase name="propAOfBloodSampleEqualsTo100ShouldReturnTrue" classname="test.main.com.roche.services.impls.BiochemistryTestServiceImplTesting" time="0.001"/>
-  </testsuite>
-</testrun>

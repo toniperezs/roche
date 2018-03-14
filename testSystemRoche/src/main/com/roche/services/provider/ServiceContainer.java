@@ -2,7 +2,6 @@ package main.com.roche.services.provider;
 
 import java.util.HashMap;
 
-import main.com.roche.bos.impls.TestBO;
 import main.com.roche.constants.Constants;
 import main.com.roche.services.impls.BaseTestServiceImpl;
 import main.com.roche.services.impls.BiochemistryTestServiceImpl;
@@ -11,7 +10,7 @@ import main.com.roche.services.impls.ImmunologyTestServiceImpl;
 
 public class ServiceContainer {
 
-	private HashMap<String, BaseTestServiceImpl> services;
+	private final HashMap<String, BaseTestServiceImpl> services;
 	private static ServiceContainer instance;
 	
 	private ServiceContainer(){

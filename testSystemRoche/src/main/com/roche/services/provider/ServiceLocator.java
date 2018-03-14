@@ -1,6 +1,5 @@
 package main.com.roche.services.provider;
 
-import main.com.roche.bos.impls.TestBO;
 import main.com.roche.services.impls.BaseTestServiceImpl;
 
 
