@@ -17,7 +17,7 @@ public class ServiceContainer {
 		super();
 		services = new HashMap<String, BaseTestServiceImpl>();
 		
-		//HARDCODED. Poner los servicios. Lo ideal es definirlos en un fichero externo, para no tener que modificar esta clase por cada nuevo servicio creado
+		//HARDCODED. Would be desirable to be through an XML conf file to not to change it every time a new service is added
 		//Identificador-class
 		services.put(Constants.TEST_BIO, BiochemistryTestServiceImpl.getInstance());
 		services.put(Constants.TEST_IMMU, ImmunologyTestServiceImpl.getInstance());

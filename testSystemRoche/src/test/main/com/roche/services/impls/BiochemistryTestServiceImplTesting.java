@@ -57,16 +57,4 @@ public class BiochemistryTestServiceImplTesting {
 		assertFalse(biochemistryTestService.doTest(testBO, samples));
     }
 
-//	private TestBO createTest(String testId, int propTestBioA, String propTestBioB,
-//			boolean propTestImmuA, String propTestImmuB){
-//		TestBO test = null;
-//		if (testId.equals(Constants.TEST_BIO)){
-//			test = new BiochemistryTestBO(false, propTestBioA, propTestBioB);
-//		}
-//		else if (testId.equals(Constants.TEST_IMMU)){
-//			test = new ImmunologyTestBO(false, propTestImmuA, propTestImmuB);
-//		}
-//		
-//		return test;
-//	}
 }

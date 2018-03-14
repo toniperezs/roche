@@ -5,6 +5,14 @@ public class PatientBO {
 	private String name;
 	private String surname;
 	private String id;
+	
+	
+	public PatientBO(String name, String surname, String id) {
+		super();
+		this.name = name;
+		this.surname = surname;
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

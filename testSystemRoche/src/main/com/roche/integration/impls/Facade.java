@@ -17,7 +17,7 @@ public class Facade implements FacadeInterface {
 
 	}
 	
-	public Facade getInstance(){
+	public static Facade getInstance(){
 		
 		if (instance == null)
 			instance = new Facade(); 
@@ -34,7 +34,7 @@ public class Facade implements FacadeInterface {
 	@Override
 	public void analizeOrder(OrderBO orderBO){
 		
-		//1. Iterar tests a realizar contra el paciente
+		//Iterate tests to be done
 		for(TestBO test : orderBO.getTests()){
 			BaseTestServiceImpl service = ServiceLocator.getInstance().getService(test.getIdentifier());
 			service.doTest(test, orderBO.getSamples());
